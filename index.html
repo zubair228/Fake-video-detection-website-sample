@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepDetect AI | Advanced Fake Video Detection</title>
+    <meta name="description" content="State-of-the-art Deepfake detection methodology using CNN models and advanced feature extraction.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <nav>
+        <div class="logo">
+            <i data-lucide="shield-check" class="icon-brand"></i>
+            <span>DeepDetect <span>AI</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#methodology">Methodology</a>
+            <a href="#analysis" class="btn-primary">Start Analysis</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Next-Gen Security</div>
+                <h1>Exposing the <span>Unseen</span> in Every Frame</h1>
+                <p>Leveraging advanced CNN architectures and robust feature extraction to distinguish between authentic media and sophisticated deepfakes.</p>
+                <div class="hero-actions">
+                    <a href="#analysis" class="btn-cta">Analyze Video <i data-lucide="arrow-right"></i></a>
+                    <a href="#methodology" class="btn-secondary">View Methodology</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="hero.png" alt="Deepfake Detection Scanning" class="hero-img">
+                    <div class="hero-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology" class="methodology">
+            <div class="section-header">
+                <h2>Our Detection <span>Methodology</span></h2>
+                <p>A multi-stage pipeline designed for maximum precision and reliability.</p>
+            </div>
+            
+            <div class="pipeline-container">
+                <div class="pipeline-line"></div>
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card" id="step-1">
+                        <div class="step-number">01</div>
+                        <div class="step-icon"><i data-lucide="database"></i></div>
+                        <h3>Dataset Collection</h3>
+                        <p>Aggregating diverse sets of real and synthetic video data for comprehensive model grounding.</p>
+                        <ul class="step-details">
+                            <li>Real Video Repositories</li>
+                            <li>Deepfake Generation Sets</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card" id="step-2">
+                        <div class="step-number">02</div>
+                        <div class="step-icon"><i data-lucide="layers"></i></div>
+                        <h3>Preprocessing</h3>
+                        <p>Refining raw data into high-quality inputs for neural processing.</p>
+                        <ul class="step-details">
+                            <li>Frame Extraction</li>
+                            <li>Noise Reduction & Resize</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card" id="step-3">
+                        <div class="step-number">03</div>
+                        <div class="step-icon"><i data-lucide="fingerprint"></i></div>
+                        <h3>Feature Extraction</h3>
+                        <p>Identifying key temporal and spatial artifacts unique to synthetic media.</p>
+                        <ul class="step-details">
+                            <li>AI Face Detection</li>
+                            <li>Artifact Signature Mapping</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-card" id="step-4">
+                        <div class="step-number">04</div>
+                        <div class="step-icon"><i data-lucide="brain-circuit"></i></div>
+                        <h3>Model Training</h3>
+                        <p>Training deep convolutional neural networks to recognize manipulation patterns.</p>
+                        <ul class="step-details">
+                            <li>CNN Model Architecture</li>
+                            <li>Iterative Pattern Learning</li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="step-card highlight" id="step-5">
+                        <div class="step-number">05</div>
+                        <div class="step-icon"><i data-lucide="check-circle"></i></div>
+                        <h3>Prediction</h3>
+                        <p>Final classification with high-confidence probability scoring.</p>
+                        <div class="status-tags">
+                            <span class="tag real">Real</span>
+                            <span class="tag fake">Fake</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="analysis-section">
+            <div class="analysis-box">
+                <div class="upload-area" id="drop-zone">
+                    <i data-lucide="clapperboard" class="upload-icon"></i>
+                    <h3>Drop video to analyze</h3>
+                    <p>Support MP4, MOV, AVI (Max 50MB)</p>
+                    <button class="btn-primary">Select File</button>
+                    <input type="file" id="file-input" hidden accept="video/*">
+                </div>
+                
+                <div class="processing-container" style="display: none;">
+                    <div class="active-processing">
+                        <div class="loader-ring"></div>
+                        <h4 id="status-text">Extracting Frames...</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recent-analyses">
+            <div class="section-header">
+                <h2>Recent <span>Analyses</span></h2>
+                <p>History of processed forensic reports.</p>
+            </div>
+            <div class="recent-grid" id="recent-grid">
+                <!-- Items populated by JS -->
+                <div class="analysis-item">
+                    <div class="item-thumb"><i data-lucide="video"></i></div>
+                    <div class="item-info">
+                        <h4>Interview_01.mp4</h4>
+                        <p>2 mins ago • 14.2 MB</p>
+                    </div>
+                    <div class="item-status">
+                        <span class="tag real">Real</span>
+                    </div>
+                </div>
+                <div class="analysis-item">
+                    <div class="item-thumb"><i data-lucide="video"></i></div>
+                    <div class="item-info">
+                        <h4>Social_Post_X.mov</h4>
+                        <p>1 hour ago • 5.1 MB</p>
+                    </div>
+                    <div class="item-status">
+                        <span class="tag fake">Fake</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DeepDetect AI. Built for Forensic Integrity.</p>
+    </footer>
+
+    <!-- AI Engine: TensorFlow.js & Face Detection -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="main.js" defer></script>
+</body>
+</html>
